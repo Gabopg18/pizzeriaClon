@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #ED7D31;
+    --color-primary-hover: #D96B20;
+    --color-primary-light: #FDEFE6;
+    --color-primary-dark: #C45A10;
+
+    --color-bg-base: #F9F8F6;
+    --color-surface-white: #FFFFFF;
+    --color-surface-dark: #1A1A1A;
+    --color-surface-charcoal: #141414;
+
+    --color-border-subtle: #E8E5DF;
+    --color-border-card: #F0ECE1;
+
+    --color-text-main: #1D1B1A;
+    --color-text-secondary: #686461;
+    --color-text-muted: #9E9A96;
+    --color-text-white: #FFFFFF;
+  }
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-barlow-condensed), Impact, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.font-body {
+  font-family: var(--font-plus-jakarta-sans), Inter, system-ui, sans-serif;
+}
+
+/* Texture & Craft Accents */
+.paper-texture {
+  background-color: #F9F8F6;
+  background-image: radial-gradient(#E8E4DC 0.65px, transparent 0.65px), radial-gradient(#FAF8F4 0.65px, #F9F8F6 0.65px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Washi Tape Accent */
+.washi-tape {
+  background: rgba(232, 219, 190, 0.75);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 1px 3px rgba(30, 20, 10, 0.12), inset 0 0 4px rgba(255, 255, 255, 0.4);
+  border-left: 1px dashed rgba(180, 160, 130, 0.25);
+  border-right: 1px dashed rgba(180, 160, 130, 0.25);
+}
+
+/* Polaroid Card Effect */
+.polaroid-card {
+  background: #ffffff;
+  padding: 10px 10px 28px 10px;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.16), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 30px -4px rgba(0, 0, 0, 0.22);
+}
+
+/* Custom rustic brush shape for hero text */
+.brush-badge {
+  background: rgba(20, 20, 20, 0.94);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(0% 2%, 98% 0%, 100% 96%, 2% 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0ECE1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ED7D31;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D96B20;
+}
